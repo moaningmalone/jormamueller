@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset=utf-8>
-<title>Jorma Müller Swiper</title>
+<title>Jorma Müller fotorama</title>
 <meta name="description" content="">
 
 <!-- Mobile-friendly viewport -->
@@ -11,35 +11,11 @@
 <!-- Style sheet link -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 <link href="css/stylesheet.css" rel="stylesheet" media="all">
-<!-- swiper --><link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.7/css/swiper.css" rel="stylesheet" media="all">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-<!-- swiper --><script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.2.7/js/swiper.jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
-<style>
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-				height: auto;
-    }
-    .swiper-button-prev,
-    .swiper-button-next {
-      position: relative;
-      width: 27px;
-      height: 44px;
-      margin-top: 0;
-    }
-    </style>
+<!-- fotorama --><link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<!-- fotorama --><script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -76,39 +52,17 @@
 		<h2>Image Slider</h2>
 		<div class="image-wrap">
 			<div class="image-inner">
-				<!-- Swiper -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="images/01_New/84_L1001374.jpg" title="test caption" alt="" class=""></div>
-            <div class="swiper-slide"><img src="images/01_New/85_L1001345.jpg" alt="" class=""></div>
-            <div class="swiper-slide"><img src="images/01_New/86_L1001699.jpg" alt="" class=""></div>
-						<div class="swiper-slide"><img src="images/01_New/87_MG_8586.jpg" alt="" class=""></div>
-						<div class="swiper-slide">Slide</div>
-						<div class="swiper-slide">Slide</div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div><!-- /swiper-container -->
-			</div><!-- /image-inner -->
+				<div class="fotorama" data-allowfullscreen="true" data-loop="true" data-keyboard="true">
+					<img src="images/01_New/84_L1001374.jpg" title="test caption" alt="" class="">
+					<img src="images/01_New/85_L1001345.jpg" alt="" class="">
+					<img src="images/01_New/86_L1001699.jpg" alt="" class="">
+					<img src="images/01_New/87_MG_8586.jpg" alt="" class="">
+				</div><!-- /fotorama -->
 
 
-			<!-- Initialize Swiper -->
-	    <script>
-	    var swiper = new Swiper('.swiper-container', {
-	        pagination: '.swiper-pagination',
-	        nextButton: '.swiper-button-next',
-	        prevButton: '.swiper-button-prev',
-	        slidesPerView: 1,
-	        paginationClickable: true,
-	        spaceBetween: 30,
-	        loop: true
-	    });
-	    </script>
-		</div><!-- /image-wrap -->
-		<h2>Image List</h2>
+	</div><!-- /image-inner -->
+	</div><!-- /image-wrap -->
+
 
 	</main><!-- End primary page content -->
 </div><!-- /container -->
